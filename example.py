@@ -1,44 +1,22 @@
-from tkinter import *
-import random
 
-root = Tk()
-root.geometry("400x400")
+month = ("January", "February", "March", "April", "May", "June", "July", "August", "September",
+         "October", "November", "December") 
 
-list1 = []
-list2 = []
+profits = (20000,45000,78000,97000,12000,456000,65000,54000,10000,30000,70000,90000)
 
-input1 = Entry(root)
-input2 = Entry(root)
-list1_label = Label(root)
-list2_label = Label(root)
-random_list1_label = Label(root)
-random_list2_label = Label(root)
 
-def dosomthing():
-    input1_data = input1.get()
-    input2_data = input2.get()
-    list1.append(input1_data)
-    list2.append(input2_data)
-    list1_label["text"] = "Text Box 1" + str(list1)
-    list2_label["text"] = "Text Box 2: " + str(list2)
+max_profit = max(profits)
+max_profit_index = profits.index(max_profit)
+print(max_profit_index)
 
-def dosomthing2():
-    random_number1 = random.randint(0, (len(list1)-1))
-    random_number2 = random.randint(0, (len(list2)-1))
-    text1 = list1[random_number1]
-    text2 = list2[random_number2]
-    random_list1_label["text"] = "Random 1: " + str(text1)
-    random_list2_label["text"] = "Random 2: " + str(text2)
+max_profit_month = month[max_profit_index]
+print("The maximum profit of " + str(max_profit)+ " was recorded in the month of " 
+      + str(max_profit_month))
 
-btn = Button(root, text="Ok", command=dosomthing)
-btn1 = Button(root, text="Show Random", command=dosomthing2)
-input1.pack()
-input2.pack()
-list1_label.pack()
-list2_label.pack()
-btn.pack()
-random_list1_label.pack()
-random_list2_label.pack()
-btn1.pack()
+min_profit = min(profits)
+min_profit_index = profits.index(min_profit)
+print(min_profit_index)
 
-root.mainloop()
+min_profit_month = month[min_profit_index]
+print( "The minimum profit of "+str(min_profit)+" was recorded in the month of "
+      +str(min_profit_month))
