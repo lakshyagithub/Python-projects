@@ -10,7 +10,7 @@ data = [
         [0,0,1,1,1,1,1,0],
         [0,0,0,0,0,0,0,0]]
 
-plt.imshow(data, cmap= 'gray')
+plt.imshow(data, cmap= 'tab20')
 plt.show()
 
     
