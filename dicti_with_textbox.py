@@ -54,6 +54,7 @@ btn_of_tkinter.place(relx=0.5, rely=0.6, anchor=CENTER)
 #Placing
 text_box.place(relx=0.5, rely=0.4, anchor=CENTER)
 btn.place(relx=0.5, rely=0.5, anchor=CENTER)
+label1.place(relx=0.5, rely=0.6, anchor=CENTER)
 """
 label_of_mutable.place(relx=0.5, rely=0.3, anchor=CENTER)
 label_of_immutable.place(relx=0.5, rely=0.5, anchor=CENTER)
