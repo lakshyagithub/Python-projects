@@ -4,6 +4,12 @@ root = Tk()
 root.title("Dictionary")
 root.geometry("600x400")
 root.configure(background="sky blue")
+
+text_box = Entry(root)
+text_box_entry = text_box.get()
+
+label1 = Label(root)
+
 """
 label_of_mutable = Label(root)
 label_of_immutable = Label(root)
@@ -14,7 +20,13 @@ dict1 = {'mutable' : 'Values that can be changed like a list in python',
          'immutable' : 'Values that cannot be changed like a tuple in python',
          'tkinter' : 'It is a GUI library for python'}
 
- 
+def search_meaning():
+    if text_box_entry == "muteable":
+        label1["text"] = dict1['mutable']
+    if text_box_entry == "immutable":
+        label1["text"] = dict1['immutable']
+    if text_box_entry == "tkinter":
+        label1["text"] = dict1["tkinter"]
 
 """"
 def mutable():
@@ -28,6 +40,7 @@ def tkinter1():
 """
 
 #Buttons
+btn = Button(root, text="Search", command=search_meaning, bd="Light green", fg="white", bd=0)
 """
 btn_of_muteable = Button(root, text="Meaning of muteable", command=mutable, bg="Light green", fg="white", bd=0)
 btn_of_immmuteable = Button(root, text="Meaning of immuteable", command=immutable, bg="Light green", fg="white", bd=0)
@@ -37,7 +50,9 @@ btn_of_immmuteable.place(relx=0.5, rely=0.4, anchor=CENTER)
 btn_of_tkinter.place(relx=0.5, rely=0.6, anchor=CENTER)
 """
 
-#Placing lables
+#Placing
+text_box.place(relx=0.5, rely=0.4, anchor=CENTER)
+btn.place(relx=0.5, rely=0.5, anchor=CENTER)
 """
 label_of_mutable.place(relx=0.5, rely=0.3, anchor=CENTER)
 label_of_immutable.place(relx=0.5, rely=0.5, anchor=CENTER)
