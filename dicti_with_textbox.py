@@ -28,6 +28,7 @@ def search_meaning():
     if text_box_entry == "tkinter":
         label1["text"] = dict1["tkinter"]
 
+#GIT
 """"
 def mutable():
     label_of_mutable['text'] = "Meaning: " + dict1['mutable']
