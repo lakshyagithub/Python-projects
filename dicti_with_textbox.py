@@ -41,7 +41,7 @@ def tkinter1():
 """
 
 #Buttons
-btn = Button(root, text="Search", command=search_meaning, bd="Light green", fg="white", border=0)
+btn = Button(root, text="Search", command=search_meaning, background="light green", fg="white", bd=0)
 """
 btn_of_muteable = Button(root, text="Meaning of muteable", command=mutable, bg="Light green", fg="white", bd=0)
 btn_of_immmuteable = Button(root, text="Meaning of immuteable", command=immutable, bg="Light green", fg="white", bd=0)
