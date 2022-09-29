@@ -6,7 +6,6 @@ root.geometry("600x400")
 root.configure(background="sky blue")
 
 text_box = Entry(root)
-text_box_entry = text_box.get()
 
 label1 = Label(root)
 
@@ -21,13 +20,13 @@ dict1 = {'mutable' : 'Values that can be changed like a list in python',
          'tkinter' : 'It is a GUI library for python'}
 
 def search_meaning():
-    if text_box_entry == "muteable":
-        label1["text"] = dict1['mutable']
+    text_box_entry = text_box.get()
+    if text_box_entry == "mutable":
+        label1['text'] = "Meaning: " + dict1['mutable']
     if text_box_entry == "immutable":
-        label1["text"] = dict1['immutable']
+        label1['text'] = "Meaning: " + dict1['immutable']
     if text_box_entry == "tkinter":
-        label1["text"] = dict1["tkinter"]
-
+        label1['text'] = "Meaning: " + dict1['tkinter']
 
 """"
 def mutable():
