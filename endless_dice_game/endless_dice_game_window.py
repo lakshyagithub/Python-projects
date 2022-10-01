@@ -1,7 +1,5 @@
 from tkinter import *
-from turtle import color
 from PIL import Image, ImageTk
-from numpy import place
 
 root = Tk()
 root.title("endless dice game")
