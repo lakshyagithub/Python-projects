@@ -27,6 +27,10 @@ player2_score.place(relx=0.8, rely=0.4, anchor=CENTER)
 score_of_player.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 #functions for rolling the dice
-
+player1_s = 0
+player2_s = 0
+def player1_s_function():
+	global player1_s
+	r = ranint(0,5)
 
 root.mainloop()
