@@ -1,3 +1,4 @@
+#Libraries
 from tkinter import *
 from PIL import Image, ImageTk
 import random
@@ -9,7 +10,7 @@ root.geometry("600x400")
 root.configure(background="Pink")
 
 #Dice
-Dice_image = ImageTk.PhotoImage(Image.open("dice.jpg"))
+Dice_image = ImageTk.PhotoImage(Image.open ("dice.jpg"))
 
 #Labels
 player1 = Label(root, text="Player 1", bg="Cyan")
