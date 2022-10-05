@@ -36,10 +36,16 @@ def player1_s_function():
 	player1_s = player1_s + r
 	player1_score["text"] = str(player1_s)
 
-def player1_s_function():
+def player2_s_function():
 	global player2_s
 	r = random.randint(1,6)
 	score_of_player["text"] = "player 2 score: " + str(r)
 	player2_s = player2_s + r
 	player2_score["text"] = str(player2_s)
+
+btn1 = Button(root, image=Dice_image, command=player1_s_function, bd=0)
+btn2 = Button(root, image=Dice_image, command=player2_s_function, bd=0)
+
+btn1.place(relx=0.2, rely=0.6, anchor=CENTER)
+btn2.place(relx=0.8, rely=0.6, anchor=CENTER)
 root.mainloop()
