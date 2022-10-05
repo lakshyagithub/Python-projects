@@ -31,6 +31,15 @@ player1_s = 0
 player2_s = 0
 def player1_s_function():
 	global player1_s
-	r = ranint(0,5)
+	r = random.randint(1,6)
+	score_of_player["text"] = "player 1 score: " + str(r)
+	player1_s = player1_s + r
+	player1_score["text"] = str(player1_s)
 
+def player1_s_function():
+	global player2_s
+	r = random.randint(1,6)
+	score_of_player["text"] = "player 2 score: " + str(r)
+	player2_s = player2_s + r
+	player2_score["text"] = str(player2_s)
 root.mainloop()
