@@ -1,13 +1,16 @@
+#Libraries
 from tkinter import *
 from PIL import Image, ImageTk
+import random
 
+#Window properties
 root = Tk()
 root.title("endless dice game")
 root.geometry("600x400")
 root.configure(background="Pink")
 
 #Dice
-
+Dice_image = ImageTk.PhotoImage(Image.open("dice.jpg"))
 
 #Labels
 player1 = Label(root, text="Player 1", bg="Cyan")
@@ -22,5 +25,8 @@ player2.place(relx=0.8, rely=0.3, anchor=CENTER)
 player1_score.place(relx=0.2, rely=0.4, anchor=CENTER)
 player2_score.place(relx=0.8, rely=0.4, anchor=CENTER)
 score_of_player.place(relx=0.5, rely=0.5, anchor=CENTER)
+
+#functions for rolling the dice
+
 
 root.mainloop()
