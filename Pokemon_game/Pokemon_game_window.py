@@ -8,6 +8,12 @@ root.configure(background="sky blue")
 
 #Images
 abra = ImageTk.PhotoImage(Image.open ("abra.jpg"))
+bulbasour = ImageTk.PhotoImage(Image.open ("bulbasour.jpg"))
+button = ImageTk.PhotoImage(Image.open ("button.jpg"))
+pikachu = ImageTk.PhotoImage(Image.open ("picachu.jpg"))
+#abra = ImageTk.PhotoImage(Image.open ("abra.jpg"))
+#abra = ImageTk.PhotoImage(Image.open ("abra.jpg"))
+
 
 #Labels
 player1 = Label(root, text="Player 1")
