@@ -6,6 +6,9 @@ root.title("Pokemon game")
 root.geometry("600x400")
 root.configure(background="sky blue")
 
+#Images
+abra = ImageTk.PhotoImage(Image.open ("abra.jpg"))
+
 #Labels
 player1 = Label(root, text="Player 1")
 player2 = Label(root, text="Player 2")
