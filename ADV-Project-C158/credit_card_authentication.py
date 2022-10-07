@@ -14,7 +14,6 @@ input_box.place(relx=0.5, rely=0.3, anchor = CENTER)
 img=ImageTk.PhotoImage(Image.open ("./credit.jpg"))
 label = Label(root, image=img)
 
-
 def authentication():
         try:
                 input_value = int(input_box.get())
