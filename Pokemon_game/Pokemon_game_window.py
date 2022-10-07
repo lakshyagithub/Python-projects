@@ -1,6 +1,7 @@
 #Librarys
 from tkinter import *
 from PIL import Image, ImageTk
+import random
 
 #Make the window
 root = Tk()
@@ -9,10 +10,10 @@ root.geometry("600x400")
 root.configure(background="sky blue")
 
 #Images
-abra = ImageTk.PhotoImage(Image.open ("abra.jpg"))
-bulbasour = ImageTk.PhotoImage(Image.open ("bulbasour.jpg"))
-button = ImageTk.PhotoImage(Image.open ("button.jpg"))
-pikachu = ImageTk.PhotoImage(Image.open ("pikachu.jpg"))
+abra = ImageTk.PhotoImage(Image.open("abra.jpg"))
+bulbasour = ImageTk.PhotoImage(Image.open("bulbasour.jpg"))
+button = ImageTk.PhotoImage(Image.open("button.jpg"))
+pikachu = ImageTk.PhotoImage(Image.open("pikachu.jpg"))
 jigglypuff = ImageTk.PhotoImage(Image.open("jigglypuff.jpg"))
 Iyvasour = ImageTk.PhotoImage(Image.open("Iyvasour.jpg"))
 charmender = ImageTk.PhotoImage(Image.open("charmender.jpg"))
