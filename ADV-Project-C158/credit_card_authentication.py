@@ -11,13 +11,16 @@ root.configure(background="gold")
 input_box = Entry()
 input_box.place(relx=0.5, rely=0.3, anchor = CENTER)
 
-img=ImageTk.PhotoImage(Image.open ("credit.jpg"))
+img=ImageTk.PhotoImage(Image.open ("./credit.jpg"))
 label = Label(root, image=img)
 
 
 def authentication():
-        input_value = int(input_box.get())
-        messagebox.showinfo("Alert","Credit card accepted.")
+        try:
+                input_value = int(input_box.get())
+                messagebox.showinfo("Alert","Credit card accepted.")
+        except ValueError:
+                messagebox.showerror("Alert", "Credit card not accepted")
 
 
 btn = Button(root, text = "check credit card", command = authentication)
