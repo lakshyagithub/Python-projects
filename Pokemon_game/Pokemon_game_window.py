@@ -34,20 +34,40 @@ player1_score_data = 0
 def player1_s_function():
 	global player1_score_data
 	random_number_player1 = random.randint(0, 13)
-	pokemon_list[random_number_player1]
+	random_pokemon = pokemon_list[random_number_player1]
+	score_of_player["image"] = random_pokemon
+	random_power_list = Power_pokemon[random_number_player1]
+	player1_score_data = player1_score_data + random_power_list
+	player1_score["text"] = player1_score_data
+
+player2_score_data = 0
+def player2_s_function():
+	global player2_score_data
+	random_number_player2 = random.randint(0, 13)
+	random_pokemon = pokemon_list[random_number_player2]
+	score_of_player["image"] = random_pokemon
+	random_power_list = Power_pokemon[random_number_player2]
+	player2_score_data = player2_score_data + random_power_list
+	player2_score["text"] = player2_score_data
 
 #Labels
 player1 = Label(root, text="Player 1")
 player2 = Label(root, text="Player 2")
 player1_score = Label(root)
 player2_score = Label(root)
-score_of_player = Label(root, bg="Orangered", fg="white")
+score_of_player = Label(root)
+
+#Buttons
+btn1 = Button(root, image=button, command=player1_s_function, bd=0)
+btn2 = Button(root, image=button, command=player2_s_function, bd=0)
 
 #Placing
 player1.place(relx=0.2, rely=0.3, anchor=CENTER)
 player2.place(relx=0.8, rely=0.3, anchor=CENTER)
 player1_score.place(relx=0.2, rely=0.4, anchor=CENTER)
+btn1.place(relx=0.2, rely=0.6, anchor=CENTER)
 player2_score.place(relx=0.8, rely=0.4, anchor=CENTER)
+btn2.place(relx=0.8, rely=0.6, anchor=CENTER)
 score_of_player.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 root.mainloop()
