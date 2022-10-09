@@ -10,23 +10,23 @@ root.geometry("600x400")
 root.configure(background="sky blue")
 
 #Images
-abra = ImageTk.PhotoImage(Image.open("abra.jpg"))
-bulbasour = ImageTk.PhotoImage(Image.open("bulbasour.jpg"))
-button = ImageTk.PhotoImage(Image.open("button.jpg"))
-pikachu = ImageTk.PhotoImage(Image.open("pikachu.jpg"))
-jigglypuff = ImageTk.PhotoImage(Image.open("jigglypuff.jpg"))
-Iyvasour = ImageTk.PhotoImage(Image.open("Iyvasour.jpg"))
-charmender = ImageTk.PhotoImage(Image.open("charmender.jpg"))
-kadabra = ImageTk.PhotoImage(Image.open("kadabra.jpg"))
-meowth = ImageTk.PhotoImage(Image.open("meowth.jpg"))
-persion = ImageTk.PhotoImage(Image.open ("persion.jpg"))
-ratata = ImageTk.PhotoImage(Image.open("ratata.jpg"))
-squirtle = ImageTk.PhotoImage(Image.open("squirtle.jpg"))
-nidoking = ImageTk.PhotoImage(Image.open("nidoking.jpg"))
-paras = ImageTk.PhotoImage(Image.open ("paras.jpg"))
+abra = ImageTk.PhotoImage(Image.open("images/abra.jpg"))
+bulbasour = ImageTk.PhotoImage(Image.open("images/bulbasour.jpg"))
+button = ImageTk.PhotoImage(Image.open("images/button.jpg"))
+pikachu = ImageTk.PhotoImage(Image.open("images/pikachu.jpg"))
+jigglypuff = ImageTk.PhotoImage(Image.open("images/jigglypuff.jpg"))
+Iyvasour = ImageTk.PhotoImage(Image.open("images/Iyvasour.jpg"))
+charmender = ImageTk.PhotoImage(Image.open("images/charmender.jpg"))
+kadabra = ImageTk.PhotoImage(Image.open("images/kadabra.jpg"))
+meowth = ImageTk.PhotoImage(Image.open("images/meowth.jpg"))
+persion = ImageTk.PhotoImage(Image.open ("images/persion.jpg"))
+ratata = ImageTk.PhotoImage(Image.open("images/ratata.jpg"))
+squirtle = ImageTk.PhotoImage(Image.open("images/squirtle.jpg"))
+nidoking = ImageTk.PhotoImage(Image.open("images/nidoking.jpg"))
+paras = ImageTk.PhotoImage(Image.open ("images/paras"))
 
 #Powers and cards
-pokemon_list = ["Pikachu", "Bulbasor", "jigglypuff", "Iyvasour", "charmender", "kadabra", "meowth", "persion", "ratata", "squirtle", "nidoking", "paras"]
+pokemon_list = ["pikachu", "bulbasor", "jigglypuff", "Iyvasour", "charmender", "kadabra", "meowth", "persion", "ratata", "squirtle", "nidoking", "paras"]
 Power_pokemon = [200, 60, 70, 100, 50, 70, 60, 70, 40, 50, 90, 40]
 
 #Other
