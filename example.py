@@ -1,4 +1,23 @@
-array_2D = [["Name: John", "Grade: A"], ["Name: James", "Grade: B"], ["Name: Thomas", "Grade: C"]]
-array_3D = [[["John", "A", "Excellent"], ["James", "B", "Very Good"], ["Thomas", "C", "Good"]]]
+from tkinter import *
 
-print(array_2D[0][1])
+lol1 = Tk()
+lol1.geometry("600x400")
+lol1.title("Add with five")
+
+inputbox = Entry(lol1)
+
+def add1():
+    inputbox_value = inputbox.get()
+    five5 = 5
+    try:
+        int_inputbox_data = int(inputbox_value)
+        print("Answer: ", five5 + int_inputbox_data)
+    except ValueError:
+        print("Please put a valid number")
+
+btn = Button(lol1, text="Click me!", command=add1)
+
+inputbox.pack()
+btn.pack()
+
+lol1.mainloop()
