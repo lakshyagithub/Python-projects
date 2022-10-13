@@ -1,7 +1,8 @@
 #Librarys
-from tkinter import *
-from PIL import Image, ImageTk
 import random
+from tkinter import *
+
+from PIL import Image, ImageTk
 
 #Make the window
 root = Tk()
