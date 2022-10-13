@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import ImageTk, Image
+
+from PIL import Image, ImageTk
 
 root=Tk()
 root.title("Country Flags")
