@@ -11,7 +11,7 @@ root.maxsize(600, 500)
 
 save_img = ImageTk.PhotoImage(Image.open("save1.png"))
 open_file_img = ImageTk.PhotoImage(Image.open("open1.png"))
-exit_img = ImageTk.PhotoImage(Image.open("exit1.jpg"))
+debug_img = ImageTk.PhotoImage(Image.open("run.png"))
 
 label_file_name = Label(root, text="File name: ")
 label_file_name.place(relx=0.6, rely=0.1, anchor=CENTER)
@@ -47,7 +47,7 @@ def save_file():
   print("not yet")
 
 
-def exit_file():
+def run_file():
   input_file_name.delete(0, END)
   my_text.delete(1.0, END)
   root.title("HTML editor - No file open")
@@ -57,7 +57,7 @@ open_button = Button(root, image=open_file_img, command=open_file)
 open_button.place(relx=0.05, rely=0.1, anchor=CENTER)
 save_button = Button(root, image=save_img, command=save_file)
 save_button.place(relx=0.11, rely=0.1, anchor=CENTER)
-exit_button = Button(root, image=exit_img, command=exit_file)
+exit_button = Button(root, image=debug_img, command=run_file)
 exit_button.place(relx=0.17, rely=0.1, anchor=CENTER)
 
 root.mainloop()

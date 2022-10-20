@@ -1,9 +1,11 @@
 from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import filedialog
+from tkinter import messagebox
 import os
 
 root = Tk()
+root.title("Lakshya's Text editor - No file open")
 root.minsize(600, 500)
 root.maxsize(600, 500)
 
@@ -20,24 +22,31 @@ input_file_name.place(relx=0.8,rely=0.1, anchor= CENTER)
 my_text= Text(root, height=20, width=60)
 my_text.place(relx=0.5,rely=0.55,anchor=CENTER)
 
-name1 = ""
+name = ""
+
+
 def open_file():
-    global name1
-    input_file_name.delete(0, END)
-    my_text.delete(1.0, END)
-    text_file = filedialog.askopenfilename(title="Select a text file (.txt)",
-                                           filetypes=(("Text documents", "*.txt"),))
-    print(text_file)
-    name = os.path.basename(text_file)
-    formated_name = name.split(".")[0]
-    print()
+  global name
+  input_file_name.delete(0, END)
+  my_text.delete(1.0, END)
+  text_file = filedialog.askopenfilename(title="Select a Text file (.txt)",
+                                         filetypes=(("Text documents",
+                                                     "*.txt"), ))
+  print(text_file)
+  name = os.path.basename(text_file)
+  formated_name = name.split(".")[0]
+  input_file_name.insert(END, formated_name)
+  root.title("Lakshya's Text editor - " + formated_name)
+  text_file = open(name, "r")
+  paragraph = text_file.read()
+  my_text.insert(END, paragraph)
+  text_file.close()
 
 def save_file():
-    print("not yet")
+    messagebox.showinfo("Done!", "Your file was saved!")
 
 def exit_file():
-    input_file_name.delete(0, END)
-    my_text.delete(1.0, END)
+    root.destroy()
 
 
 open_button=Button(root, image=open_file_img, command=open_file)
