@@ -22,11 +22,11 @@ input_file_name.place(relx=0.8, rely=0.1, anchor=CENTER)
 my_text = Text(root, height=20, width=60, background="grey", fg="white")
 my_text.place(relx=0.5, rely=0.55, anchor=CENTER)
 
-name1 = ""
+name = ""
 
 
 def open_file():
-  global name1
+  global name
   input_file_name.delete(0, END)
   my_text.delete(1.0, END)
   text_file = filedialog.askopenfilename(title="Select a html file (.html)",
@@ -37,9 +37,9 @@ def open_file():
   formated_name = name.split(".")[0]
   input_file_name.insert(END, formated_name)
   root.title("HTML editor - " + formated_name)
-  text_file = open(name1, 'r')
+  text_file = open(name, "r")
   paragraph = text_file.read()
-  text_file.insert(END, paragraph)
+  my_text.insert(END, paragraph)
   text_file.close()
 
 
