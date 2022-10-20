@@ -5,6 +5,7 @@ import os
 
 root = Tk()
 root.title("HTML editor - No file open")
+root.config(background="sky blue")
 root.minsize(600, 500)
 root.maxsize(600, 500)
 
@@ -18,7 +19,7 @@ label_file_name.place(relx=0.6, rely=0.1, anchor=CENTER)
 input_file_name = Entry(root)
 input_file_name.place(relx=0.8, rely=0.1, anchor=CENTER)
 
-my_text = Text(root, height=20, width=60)
+my_text = Text(root, height=20, width=60, background="grey", fg="white")
 my_text.place(relx=0.5, rely=0.55, anchor=CENTER)
 
 name1 = ""
@@ -34,6 +35,12 @@ def open_file():
   print(text_file)
   name = os.path.basename(text_file)
   formated_name = name.split(".")[0]
+  input_file_name.insert(END, formated_name)
+  root.title("HTML editor - " + formated_name)
+  text_file = open(name1, 'r')
+  paragraph = text_file.read()
+  text_file.insert(END, paragraph)
+  text_file.close()
 
 
 def save_file():
@@ -43,6 +50,7 @@ def save_file():
 def exit_file():
   input_file_name.delete(0, END)
   my_text.delete(1.0, END)
+  root.title("HTML editor - No file open")
 
 
 open_button = Button(root, image=open_file_img, command=open_file)
