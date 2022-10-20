@@ -43,6 +43,13 @@ def open_file():
   text_file.close()
 
 def save_file():
+    input_name = input_file_name.get()
+    file = open(input_name + ".txt", "w")
+    data = my_text.get("1.0", END)
+    print(data)
+    file.write(data)
+    input_file_name.delete(0, END)
+    my_text.delete(1.0, END)
     messagebox.showinfo("Done!", "Your file was saved!")
 
 def exit_file():
