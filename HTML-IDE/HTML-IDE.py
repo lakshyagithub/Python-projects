@@ -1,7 +1,9 @@
 from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import filedialog
+from tkinter import messagebox
 import os
+import webbrowser
 
 root = Tk()
 root.title("HTML editor - No file open")
@@ -44,13 +46,19 @@ def open_file():
 
 
 def save_file():
-  print("not yet")
+  input_name = input_file_name.get()
+  file = open(input_name + ".html", "w")
+  data = my_text.get("1.0", END)
+  print(data)
+  file.write(data)
+  input_file_name.delete(0, END)
+  my_text.delete(1.0, END)
+  messagebox.showinfo("Done!", "Your file was saved!")
 
 
 def run_file():
-  input_file_name.delete(0, END)
-  my_text.delete(1.0, END)
-  root.title("HTML editor - No file open")
+  global name
+  webbrowser.open(name)
 
 
 open_button = Button(root, image=open_file_img, command=open_file)

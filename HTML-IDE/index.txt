@@ -5,8 +5,6 @@
 </head>
 <body>
   <h1>I will edit this text in my own HTML editor</h1>
-  <h2>Hi, Hello!</h2>
+  <h1>Update I have updated this in my own HTML editor</h1>
 </body>
 </html>
-
-
