@@ -18,7 +18,10 @@ def open_image():
         "*.png; *.jpg; *.jpeg; *.gif; *.txt"
         )])
     print("Image path: ", img_path)
-
+    img = ImageTk.PhotoImage(Image.open(img_path))
+    label_image["image"]=img
+    img.close()
+  
 open_file_btn = Button(root, text="Open file", command=open_image, bg="light green", fg="white", bd=0, font=("Comic Sans MS", 12, "bold"))
 open_file_btn.place(relx=0.5, rely=0.7, anchor=CENTER)
 
