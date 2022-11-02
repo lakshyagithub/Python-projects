@@ -23,11 +23,19 @@ def open_image():
     img = ImageTk.PhotoImage(img1)
     label_image["image"]=img
     img.close()
+    
+def rotate_image():
+    global img_path
+    load_img = Image.open(img_path)
+    load_img.rotate(45)
+    img2 = ImageTk.PhotoImage(Image.open(load_img))
+    label_image["image"] = img2
+    img2.close()
   
 open_file_btn = Button(root, text="Open file", command=open_image, bg="light green", fg="white", bd=0, font=("Comic Sans MS", 12, "bold"))
 open_file_btn.place(relx=0.5, rely=0.7, anchor=CENTER)
 
-rotate_file_btn = Button(root, text="Rotate image", bg="light green", fg="white", bd=0, font=("Comic Sans MS", 12, "bold"))
+rotate_file_btn = Button(root, text="Rotate image", command=rotate_image, bg="light green", fg="white", bd=0, font=("Comic Sans MS", 12, "bold"))
 rotate_file_btn.place(relx=0.5, rely=0.8, anchor=CENTER)
 
 root.mainloop()
