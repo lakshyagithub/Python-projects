@@ -31,16 +31,16 @@ d3 = ttk.Combobox(root, state="readonly", values=values3, width=10)
 values4 = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
 d4 = ttk.Combobox(root, state="readonly", values=values4, width=10)
 
-startx_label.place(relx=0.3, rely=0.9, anchor=CENTER)
-d1.place(relx=0.4, rely=0.9, anchor=CENTER)
+startx_label.place(relx=0.275, rely=0.9, anchor=CENTER)
+d1.place(relx=0.35, rely=0.9, anchor=CENTER)
 
-starty_label.place(relx=0.5, rely=0.9, anchor=CENTER)
-d2.place(relx=0.6, rely=0.9, anchor=CENTER)
+starty_label.place(relx=0.425, rely=0.9, anchor=CENTER)
+d2.place(relx=0.5, rely=0.9, anchor=CENTER)
 
-endx_label.place(relx=0.7, rely=0.9, anchor=CENTER)
-d3.place(relx=0.8, rely=0.9, anchor=CENTER)
+endx_label.place(relx=0.575, rely=0.9, anchor=CENTER)
+d3.place(relx=0.65, rely=0.9, anchor=CENTER)
 
-endy_label.place(relx=0.9, rely=0.9, anchor=CENTER)
-d4.place(relx=0.9.1, rely=0.9, anchor=CENTER)
+endy_label.place(relx=0.725, rely=0.9, anchor=CENTER)
+d4.place(relx=0.8, rely=0.9, anchor=CENTER)
 
 root.mainloop()
