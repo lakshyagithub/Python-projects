@@ -1,5 +1,0 @@
-Section 1: Input and Output Devices, Hardware, Software, Storage Devices, Memory –Primary & Secondary Memory, MS-Paint, Introduction to Multimedia, MS-Word (Paragraph Formatting Using Paragraph Group, Drop Cap, Document Views, Inserting Graphics-Pictures and Shapes, Clip Arts, Symbols, SmartArt, Multimedia Objects, Text Box, Inserting Header and Footer in a Document and Exploring its Features), Introduction to MS-PowerPoint (Component of MS-PowerPoint Window and its Features, Inserting Graphics-Pictures and Shapes, Clip Arts, Symbols, SmartArt, Multimedia Objects, Text Box, Inserting Header & Footer and Exploring its Features, Running Slide Shows, Presentation Views), Internet, Computer Networks, Using Windows, Latest Developments in the Field of IT.
-
-Achievers Section: Higher Order Thinking Questions - Syllabus as per Section 1.
-
-Questions are based on Windows 7 and MS-Office 2010.
