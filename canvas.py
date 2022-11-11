@@ -43,4 +43,74 @@ d3.place(relx=0.65, rely=0.9, anchor=CENTER)
 endy_label.place(relx=0.725, rely=0.9, anchor=CENTER)
 d4.place(relx=0.8, rely=0.9, anchor=CENTER)
 
+startx = 0
+starty = 0
+oldx = 0
+oldy = 0
+newx = 0
+newy = 0
+endx = 0
+endy = 0
+keypress = ""
+
+def circle(event):
+    global startx
+    global starty
+    global endx
+    global endy
+    global oldx
+    global oldy
+    global newx
+    global newy
+    global keypress
+    keypress = "c"
+    
+    oldx = d1.get()
+    oldy = d2.get()
+    newx = d3.get()
+    newy = d4.get()
+    
+    draw(keypress, oldx,oldy,newx,newy)
+    
+
+def rectangle(event):
+    global startx
+    global starty
+    global endx
+    global endy
+    global oldx
+    global oldy
+    global newx
+    global newy
+    global keypress
+    keypress = "r"
+    
+    oldx = d1.get()
+    oldy = d2.get()
+    newx = d3.get()
+    newy = d4.get()
+    
+    draw(keypress, oldx,oldy,newx,newy)
+
+def line(event):
+    global startx
+    global starty
+    global endx
+    global endy
+    global oldx
+    global oldy
+    global newx
+    global newy
+    global keypress
+    keypress = "l"
+    
+    oldx = d1.get()
+    oldy = d2.get()
+    newx = d3.get()
+    newy = d4.get()
+    
+    draw(keypress, oldx,oldy,newx,newy)
+    
+
+
 root.mainloop()
