@@ -102,7 +102,7 @@ def line(event):
     global newx
     global newy
     global keypress
-    keypress = "l"
+    keypress = "i"
     
     oldx = d1.get()
     oldy = d2.get()
@@ -111,6 +111,18 @@ def line(event):
     
     draw(keypress, oldx,oldy,newx,newy)
     
+def draw(keypress, oldx,oldy,newx,newy):
+    #global keypress
+    color1 = choose_colors_dropdown.get()
+    if keypress == "c":
+        draw_circle = canvas1.create_oval(oldx, oldy, newx, newy, width=3, fill=color1)
+    if keypress == "r":
+        draw_rectangle = canvas1.create_rectangle(oldx, oldy,newx, newy, width=3, fill=color1)
+    if keypress == "i":
+        draw_line = canvas1.create_line(oldx, oldy, newx, newy, width=3, fill=color1)
 
+root.bind("<c>", circle)
+root.bind("<r>", rectangle)
+root.bind("<i>", line)
 
 root.mainloop()
