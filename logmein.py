@@ -31,6 +31,9 @@ captcha_private = Label(root, text="Captcha: ")
 captcha_private.place(relx=0.2, rely=0.8, anchor=CENTER)
 
 #Main code
+class userDB:
+    def __init__(self, username, password, captcha):
+        self.username = username
 
 #Buttons - Update_login_details
 update_login_details = Button(root, text="Update login details")
