@@ -1,5 +1,6 @@
-# Python-projects
+# Python-projects-website
 
-All of my python projects stay here
+All of my python projects live here.
+See the website for better viewing: [https://lakshyagithub.github.com/Python-projects-website](https://lakshyagithub.github.io/Python-projects-website/)
 
-[![Run on Repl.it](https://replit.com/badge/github/lakshyagithub/Python-projects)](https://replit.com/new/github/lakshyagithub/Python-projects)
+Bye for now!

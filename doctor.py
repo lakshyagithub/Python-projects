@@ -8,7 +8,7 @@ class doctor:
         if(heart_rates>60 and heart_rates<100):
             print("Great, your heart is good!")
         else:
-            print("Oops, your heart rate is not good and you need to vist a doctor ASBP!")
+            print("Oh no, your heart rate is not good and you need to vist a doctor ASBP!")
 
 class paitent(doctor):
     def __init__(self, name, weight, height, heart_rates):
