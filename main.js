@@ -1,1 +1,3 @@
-const button_old = document.getElementById();
+const btn_old = document.getElementById();
+
+console.log(btn_old);
