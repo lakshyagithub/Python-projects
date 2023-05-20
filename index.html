@@ -285,7 +285,14 @@
         }
         video{
             position: relative;
+            width: 640 auto;
         }
+        @media only screen and (max-width:500px) {
+            /* For mobile phones: */
+            video, iframe {
+                width: 100%;
+            }
+}
     </style>
 </body>
 </html>
