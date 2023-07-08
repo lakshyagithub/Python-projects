@@ -1,7 +1,2 @@
-from tkinter import *
-
-root = Tk()
-root.geometry("600x400")
-root.title("Add with five")
-
-root.mainloop()
+num1 = input("Enter you number to add with five: ")
+print(num1 + 5)
