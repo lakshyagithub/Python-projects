@@ -1,8 +1,8 @@
 from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
-dataset = pd.read_csv("pokemon.csv", delimiter=",")
+dataset = loadtxt("pokemon.csv", delimiter=",")
 x = dataset.iloc[:, 1:7]
 y = dataset.iloc[:, 8]
 
