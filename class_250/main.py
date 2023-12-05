@@ -68,33 +68,33 @@ class Block(object):
         block['Current hash'] = hex_hash
         return hex_hash
 # add the code for chain_valid() function
-def chain_valid(self, chain):
-	previous_block = chain[0]
-	block_index = 1
+    def chain_valid(self, chain):
+        previous_block = chain[0] 
+        block_index = 1
 
-	while block_index < len(chain):
-		current_block = chain[block_index]
-		if current_block["previous_hash"] != previous_block["Current hash"]:
-			return False
+        while block_index < len(chain):
+            current_block = chain[block_index]
+            if current_block['previous_hash'] != previous_block['Current hash']:
+                return False
 
-		previous_nonce = previous_block["nonce"]
-		current_nonce = current_block["nonce"]
-		print("previous_nonce:", previous_nonce)
-		print("current_nonce:", current_nonce)
-		compare_proof = current_nonce ** 2 - previous_nonce ** 2
-		print("compare_proof:", compare_proof)
-		string_compare_proof = str(compare_proof).encode()
-		print("string_compare_proof:", string_compare_proof)
-		encode_compare_proof = hashlib.sha256(string_compare_proof)
-		print("encode_compare_proof:", encode_compare_proof)
-		hash_compare_proof = encode_compare_proof.hexdigest()
-		print("hash_compare_proof:", hash_compare_proof)
-		if hash_compare_proof[:4] != "0000":
-			return False
-		previous_block = current_block
-		block_index = block_index + 1
+            previous_nonce = previous_block['nonce']
+            current_nonce = current_block['nonce']
+            print('Previous nonce of previous block:',previous_nonce)
+            print('Current nonce of current block:',current_nonce)
+            compare_proof = current_nonce ** 2 - previous_nonce ** 2
+            print('Comparison of proof:',compare_proof)
+            string_compare_proof = str(compare_proof).encode()
+            print('Conversion of proof into string:',string_compare_proof)
+            encode_compare_proof = hashlib.sha256(string_compare_proof)
+            print('Encoding of proof:',encode_compare_proof)
+            hash_compare_proof = encode_compare_proof.hexdigest()
+            print('Current block nonce is:',hash_compare_proof)
+            if hash_compare_proof[:4] != '0000':
+                return False
+            previous_block = current_block
+            block_index = block_index + 1
 
-	return True
+        return True
 
 blockchain = Block()
 transaction1 = blockchain.transaction("Satoshi", "Mike", '5 ETH')
